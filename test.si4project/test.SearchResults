@@ -1,0 +1,44 @@
+---- av_read_frame Matches (43 in 34 files) ----
+video_decode in api-band-test.c (tests\api) :             if (av_read_frame(fmt_ctx, &pkt) < 0) {
+find_video_stream_info in api-codec-param-test.c (tests\api) :         if ((ret = av_read_frame(fmt_ctx, &pkt)) < 0) {
+video_decode_example in api-h264-test.c (tests\api) :             if (av_read_frame(fmt_ctx, &pkt) < 0)
+compute_crc_of_packets in api-seek-test.c (tests\api) :             if (av_read_frame(fmt_ctx, &pkt) < 0)
+asf_read_pts in asfdec_f.c (libavformat) :         if (av_read_frame(s, pkt) < 0) {
+avformat.h (libavformat) line 100 :  * avformat_open_input() function for opening a file, av_read_frame() for
+avformat.h (libavformat) line 163 :  * av_read_frame() on it. Each call, if successful, will return an AVPacket
+avformat.h (libavformat) line 179 :  * until the next av_read_frame() call or closing the file. If the caller
+AVStream in avformat.h (libavformat) :     /* av_read_frame() support */
+AVFormatContext in avformat.h (libavformat) :      *             appear in av_read_frame().
+avformat.h (libavformat) line 2387 :  * av_read_frame() or until avformat_close_input(). Otherwise the packet
+avformat.h (libavformat) line 2402 : int av_read_frame(AVFormatContext *s, AVPacket *pkt);
+concat_read_packet in concatdec.c (libavformat) :         ret = av_read_frame(cat->avf, pkt);
+dash_read_packet in dashdec.c (libavformat) :         ret = av_read_frame(cur->ctx, pkt);
+main in demuxing_decoding.c (doc\examples) :     while (av_read_frame(fmt_ctx, &pkt) >= 0) {
+pkt_dump_internal in dump.c (libavformat) :     /* DTS is _always_ valid after av_read_frame() */
+main in extract_mvs.c (doc\examples) :     while (av_read_frame(fmt_ctx, &pkt) >= 0) {
+input_thread in ffmpeg.c (fftools) :         ret = av_read_frame(f->ctx, &pkt);
+get_input_packet in ffmpeg.c (fftools) :     return av_read_frame(f->ctx, pkt);
+InputFile in ffmpeg.h (fftools) :                              from ctx.nb_streams if new streams appear during av_read_frame() */
+read_thread in ffplay.c (fftools) :         ret = av_read_frame(ic, pkt);
+read_interval_packets in ffprobe.c (fftools) :     while (!av_read_frame(fmt_ctx, &pkt)) {
+main in filtering_audio.c (doc\examples) :         if ((ret = av_read_frame(fmt_ctx, &packet)) < 0)
+main in filtering_video.c (doc\examples) :         if ((ret = av_read_frame(fmt_ctx, &packet)) < 0)
+hls_read_packet in hls.c (libavformat) :                 ret = av_read_frame(pls->ctx, &pls->pkt);
+main in hw_decode.c (doc\examples) :         if ((ret = av_read_frame(input_ctx, &packet)) < 0)
+ff_load_image in lavfutils.c (libavfilter) :     ret = av_read_frame(format_ctx, &pkt);
+mpc_read_seek in mpc.c (libavformat) :         ret = av_read_frame(s, pkt);
+mpegts_get_dts in mpegts.c (libavformat) :         ret = av_read_frame(s, &pkt);
+main in pktdumper.c (tools) :     while ((err = av_read_frame(fctx, &pkt)) >= 0) {
+main in qsvdec.c (doc\examples) :         ret = av_read_frame(input_ctx, &pkt);
+main in remuxing.c (doc\examples) :         ret = av_read_frame(ifmt_ctx, &pkt);
+sap_fetch_packet in sapdec.c (libavformat) :     ret = av_read_frame(sap->sdp_ctx, pkt);
+main in seek.c (libavformat\tests) :             ret= av_read_frame(ic, &pkt);
+main in seek_print.c (tools) :             ret = av_read_frame(avf, &packet);
+movie_push_frame in src_movie.c (libavfilter) :             ret = av_read_frame(movie->format_ctx, &movie->pkt0);
+decode_audio_frame in transcode_aac.c (doc\examples) :     if ((error = av_read_frame(input_format_context, &input_packet)) < 0) {
+main in transcoding.c (doc\examples) :         if ((ret = av_read_frame(ifmt_ctx, &packet)) < 0)
+utils.c (libavformat) line 1785 : /*av_read_frame
+utils.c (libavformat) line 1789 : int av_read_frame(AVFormatContext *s, AVPacket *pkt)
+seek_frame_generic in utils.c (libavformat) :                 read_status = av_read_frame(s, &pkt);
+main in vaapi_transcode.c (doc\examples) :         if ((ret = av_read_frame(ifmt_ctx, &dec_pkt)) < 0)
+init_subtitles in vf_subtitles.c (libavfilter) :     while (av_read_frame(fmt, &pkt) >= 0) {
